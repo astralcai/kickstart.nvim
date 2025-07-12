@@ -155,6 +155,9 @@ end
 local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 
+-- Keymap
+vim.api.nvim_set_keymap('n', '<C-h>', ':NvimTreeToggle<cr>', { silent = true, noremap = true })
+
 -- [[ Configure and install plugins ]]
 --
 --  To check the current status of your plugins, run
