@@ -4,10 +4,6 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- Disable netrw
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
 -- Python
 vim.g.python3_host_prog = '~/.pyenv/shims/python'
 
@@ -384,18 +380,6 @@ require('lazy').setup({
   },
 
   -- File Explorer
-  {
-    'nvim-tree/nvim-tree.lua',
-    version = '*',
-    lazy = false,
-    dependencies = {
-      'nvim-tree/nvim-web-devicons',
-      opts = {},
-    },
-    config = function()
-      require('nvim-tree').setup {}
-    end,
-  },
   {
     'stevearc/oil.nvim',
     ---@module 'oil'
